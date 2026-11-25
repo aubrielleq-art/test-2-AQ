@@ -17,9 +17,11 @@ Visible in the "inspect" developer tools. Finish the custom element to put the d
         connectedCallback(){
             let today=new Date();
             let nNewYearsEve=new Date(today.getFullYear(), 11, 31);
-            let nSeconds = 1000*60*60*24;
+            let milliswcondsPerDay = 1000*60*60*24;
             let nDaysLeft = Math.ceil((nNewYearsEve.getTime()-today.getTime())/(nSeconds));
-            console.log(nDaysLeft); //logs the value we are looking for in our heading
+            console.log(nDaysLeft); 
+            this.texetContent= nDaysLeft;
+            //logs the value we are looking for in our heading
             // put your "secret sauce here to get this in to the document
         }
     }
